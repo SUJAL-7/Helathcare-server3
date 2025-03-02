@@ -96,8 +96,11 @@ const analyzePatient = async (req, res) => {
 
 const patientDiet = async (req, res) => {
   try {
-    // Extract patient data from the request body
-    const patientData = req.body;
+    //patient_id from params
+    const { patient_id } = req.params;
+
+    // extract patient data from the database
+    const patientData = await Patient.findOne({ patient_id });
 
     // Validate that patient data is provided
     if (!patientData || Object.keys(patientData).length === 0) {

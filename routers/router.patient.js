@@ -6,7 +6,7 @@ const router = express.Router();
 // POST endpoint to handle patient data analysis
 router.post("/analyze-patient", patientController.analyzePatient);
 
-router.post("/patient-diet",patientController.patientDiet);
+router.get("/patient-diet/:patient_id",patientController.patientDiet);
 
 router.post("/required-medications",patientController.requiredMedications);
 

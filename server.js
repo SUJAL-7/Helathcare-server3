@@ -22,5 +22,5 @@ app.use("/vitals",vitalsRoutes);
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on PORT:${port}`);
 });
